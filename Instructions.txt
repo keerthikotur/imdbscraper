@@ -30,7 +30,10 @@ Once all imports are resolved navigate to Tools -> Services -> Servers -> Apache
 Open below url in browser.
 http://localhost:8084/IBMDBScrapper/Imdb.jsp
 
-Please note: When you run this for first time it takes time (3 to 5 min depending on Internet speed)
+Please note:
+1. Internet is required to run this project, Since all data is fetched from website.
+
+2. When you run this for first time it takes time (3 to 5 min depending on Internet speed)
 This is because onload it is trying to hit website to get details of all movies and store in database.
 This can be optimized by not fetching details on load but instead on some button click.
 
