@@ -1,0 +1,24 @@
+This project fetches top 250 movies from "http://www.imdb.com/chart/top?ref_=nv_sr_1"
+For each movie details like Name, ReleaseYear, Category, Rating, Users(Rated), ReviewsCount, Metascore is fetched and saved in database.
+UI displays top 250 moves in a Tile format with Name, year, Image and details below that. (See screenshot imdb.png)
+
+This project is built using Netbeans IDE 7.2.1
+The db used is postgresql-8.2-504 
+(Different db can be used. If so please change driver in Imdb.jsp to respective db driver and specify correct connection url)
+External library used to parse html and fetch records jsoup-1.8.2.jar.
+These jars are checked in lib for folder of project.
+These two jars much added in library and build project.
+
+Once all imports are resolved navigate to Tools -> Services -> Servers -> Apache Tomcat -> Right click and start server.
+
+Open below url in browser.
+http://localhost:8084/IBMDBScrapper/Imdb.jsp
+
+Please note: When you run this for first time it takes time (3 to 5 min depending on Internet speed)
+This is because onload it is trying to hit website to get details of all movies and store in database.
+This can be optimized by not fetching details on load but instead on some button click.
+
+
+
+
+
