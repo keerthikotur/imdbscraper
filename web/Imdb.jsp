@@ -126,6 +126,7 @@
                         }
 
                 %>
+                
                 <div class="movie">
 
                     <DIV class="name"> <%= resultset.getString(9)%>. <%= resultset.getString(1)%> (<%= resultset.getString(2)%>)</DIV>
