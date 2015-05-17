@@ -12,7 +12,7 @@ public class GetFieldsHelper {
 		try {
 			return doc.select(".image").first().childNode(1).childNode(1).attr("src");
 		} catch (Exception e1) {
-			Logger.getLogger(GetFieldsHelper.class.getName()).log(Level.WARNING, "Image link null", e1);
+			//Logger.getLogger(GetFieldsHelper.class.getName()).log(Level.WARNING, "Image link null", e1);
 		}
 		return "";
 	}
@@ -21,7 +21,7 @@ public class GetFieldsHelper {
 		try {
 			return doc.getElementsByAttributeValue("title", "See all release dates").get(0).text();
 		} catch (Exception e1) {
-			Logger.getLogger(GetFieldsHelper.class.getName()).log(Level.WARNING, "Relesed On null", e1);
+			//Logger.getLogger(GetFieldsHelper.class.getName()).log(Level.WARNING, "Relesed On null", e1);
 		}
 		return "";
 	}
@@ -30,7 +30,7 @@ public class GetFieldsHelper {
 		try {
 			return doc.select(".itemprop").select("[itemprop=genre]").text();
 		} catch (Exception e1) {
-			Logger.getLogger(GetFieldsHelper.class.getName()).log(Level.WARNING, "Category null", e1);
+			//Logger.getLogger(GetFieldsHelper.class.getName()).log(Level.WARNING, "Category null", e1);
 		}
 		return "";
 	}
@@ -39,7 +39,7 @@ public class GetFieldsHelper {
 		try {
 			return doc.select(".star-box-details").get(0).select("span[itemprop=ratingValue]").text();
 		} catch (Exception e1) {
-			Logger.getLogger(GetFieldsHelper.class.getName()).log(Level.WARNING, "Rating null", e1);
+			//Logger.getLogger(GetFieldsHelper.class.getName()).log(Level.WARNING, "Rating null", e1);
 		}
 		return "";
 	}
@@ -48,7 +48,7 @@ public class GetFieldsHelper {
 		try {
 			return doc.select(".star-box-details").get(0).select("span[itemprop=ratingCount]").text();
 		} catch (Exception e1) {
-			Logger.getLogger(GetFieldsHelper.class.getName()).log(Level.WARNING, "Users rated null", e1);
+			//Logger.getLogger(GetFieldsHelper.class.getName()).log(Level.WARNING, "Users rated null", e1);
 		}
 		return "";
 	}
@@ -57,7 +57,7 @@ public class GetFieldsHelper {
 		try {
 			return doc.select(".star-box-details").get(0).select("span[itemprop=reviewCount]").text();
 		} catch (Exception e1) {
-			Logger.getLogger(GetFieldsHelper.class.getName()).log(Level.WARNING, "Reviews Count null", e1);
+			//Logger.getLogger(GetFieldsHelper.class.getName()).log(Level.WARNING, "Reviews Count null", e1);
 		}
 		return "";
 	}

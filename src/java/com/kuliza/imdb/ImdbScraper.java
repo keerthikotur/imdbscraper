@@ -44,13 +44,11 @@ public class ImdbScraper {
         String l;
         int i = 0;
         
-            try {
-                
-          
-                String insertTableSQL = "INSERT INTO movies(movieid, title, relaeseddate, imagepath, category, "
+        try {
+            String insertTableSQL = "INSERT INTO movies(movieid, title, relaeseddate, imagepath, category, "
                         + "rating, noofusersrated, reviewscount, metascore, rank) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-                preparedStatement = con.prepareStatement(insertTableSQL);
-        for (Element e : titles) {
+            preparedStatement = con.prepareStatement(insertTableSQL);
+            for (Element e : titles) {
             movie = new ImdbMovie();
 
             movie.setRank(e.childNode(1).childNode(0).toString());
@@ -80,8 +78,7 @@ public class ImdbScraper {
                 preparedStatement.setString(7, movie.getUsersRated());
                 preparedStatement.setString(8, movie.getReviewsCount());
                 preparedStatement.setString(9, movie.getMetascore());
-                System.out.println(movie.getRank());
-                int rank = Integer.parseInt(movie.getRank().substring(0,movie.getRank().length()-1));
+                int rank = Integer.parseInt(movie.getRank().substring(0,movie.getRank().length()-2));
                 System.out.println(rank);
                 preparedStatement.setInt(10, rank);
                 preparedStatement.addBatch();
@@ -103,8 +100,5 @@ public class ImdbScraper {
                  System.out.println("Inserting done");
             }
     }
-    
-    public void insetMoviesToDb(ImdbMovie movies){
-        
-    }
+   
 }
