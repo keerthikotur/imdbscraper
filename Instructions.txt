@@ -5,9 +5,25 @@ UI displays top 250 moves in a Tile format with Name, year, Image and details be
 This project is built using Netbeans IDE 7.2.1
 The db used is postgresql-8.2-504 
 (Different db can be used. If so please change driver in Imdb.jsp to respective db driver and specify correct connection url)
+Create table in db using below query:
+
+CREATE TABLE movies
+(
+  movieid character(100) NOT NULL,
+  title character(100),
+  relaeseddate character(100),
+  imagepath character(1000),
+  category character(100),
+  rating character(100),
+  noofusersrated character(100),
+  reviewscount character(100),
+  metascore character(100),
+  rank integer
+)
+
 External library used to parse html and fetch records jsoup-1.8.2.jar.
 These jars are checked in lib for folder of project.
-These two jars much added in library and build project.
+These two jars must added in library and build project.
 
 Once all imports are resolved navigate to Tools -> Services -> Servers -> Apache Tomcat -> Right click and start server.
 
